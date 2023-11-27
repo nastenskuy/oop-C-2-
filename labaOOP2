@@ -1,0 +1,119 @@
+//Завдання №1
+Console.Write("Напишіть число - ");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n > 0)
+{
+    Console.WriteLine("Це число додатнє");
+}
+else if (n < 0)
+{
+    Console.WriteLine("Це число від'ємне");
+}
+else
+{
+    Console.WriteLine("Це число = 0");
+}
+//Завдання №2
+Console.Write("Напишіть вік - ");
+int y = Convert.ToInt32(Console.ReadLine());
+if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+{
+    Console.WriteLine($"Цей {y} рік високосний");
+}
+else
+{
+    Console.WriteLine($"Цей {y} рiк не високосний");
+}
+//Завдання №4
+Console.Write("Напишіть будь-яку букву - ");
+char sounds = Console.ReadKey().KeyChar;
+Console.WriteLine();
+if ("уеаоєюияУЕОАІЄЮИЯEYUIOAeyuioa".Contains(sounds))
+{
+    Console.WriteLine($"{sounds} голосна буква");
+}
+else if (char.IsLetter(sounds))
+{
+    Console.WriteLine($"{sounds} приголосна буква");
+}
+else
+{
+    Console.WriteLine($"Це взагалі не буква!");
+}
+//Завдання №5
+Console.Write("Напишіть одне ціле число - ");
+if (int.TryParse(Console.ReadLine(), out int num1))
+{
+    Console.Write("Напишіть ще одне цiле число - ");
+    if (int.TryParse(Console.ReadLine(), out int num2))
+    {
+        Console.Write("І ще одне число - ");
+        if (int.TryParse(Console.ReadLine(), out int num3))
+        {
+            int max = Math.Max(Math.Max(num1, num2), num3);
+
+            Console.WriteLine($"Максимальне число -  {max}");
+        }
+        else
+        {
+            Console.WriteLine(" третє число не ціле");
+        }
+    }
+    else
+    {
+        Console.WriteLine(" друге число не ціле");
+    }
+}
+else
+{
+    Console.WriteLine(" перше число не ціле");
+}
+//Завдання №6
+Console.Write("Скільки вам років -  ");
+int age = Convert.ToInt32(Console.ReadLine());
+if (age >= 12 && age <= 18)
+{
+    Console.WriteLine("підлітковий вік");
+}
+else
+{
+    Console.WriteLine("не пiдлiтковий вік");
+}
+//Завдання №7
+Console.Write("Напишіть будь-яке велике число -  ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+if (n1 % 2 == 0)
+{
+    Console.WriteLine($"Це парне число");
+}
+else
+{
+    Console.WriteLine($"Це не парне число");
+}
+if (n1 % 3 == 0)
+{
+    Console.WriteLine($"воно дiлиться на 3");
+}
+else
+{
+    Console.WriteLine($"воно не дiлиться на 3");
+}
+//Завдання №8
+Console.Write("Напишіть в сантиметрах сторону a - ");
+double a = Convert.ToDouble(Console.ReadLine());
+Console.Write("Напишіть в сантиметрах сторону b - ");
+double b = Convert.ToDouble(Console.ReadLine());
+Console.Write("Напишіть в сантиметрах сторону c - ");
+double c = Convert.ToDouble(Console.ReadLine());
+if (a >= b && a >= c)
+{
+    Console.WriteLine($"a найдовша сторона");
+}
+else if (b >= a && b >= c)
+{
+    Console.WriteLine($"b найдовша сторона");
+}
+else
+{
+    Console.WriteLine($"c  найдовша сторона");
+}
